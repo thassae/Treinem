@@ -4,7 +4,8 @@
   "main": "main.js",
   "scripts": {
     "ng": "ng",
-    "start": "ng build --base-href ./ && electron .",
+    "start": "ng build && electron .",
+    "start-prod": "ng build --prod && electron .",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -22,6 +23,7 @@
     "@angular/router": "~8.2.11",
     "bulma": "^0.8.0",
     "electron": "^7.0.0",
+    "ngx-electron": "^2.2.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
