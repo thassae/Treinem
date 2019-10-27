@@ -1,20 +1,19 @@
-const {
-    app,
-    BrowserWindow
-} = require('electron')
+const { app, BrowserWindow, ipcMain } = require('electron');
 const url = require("url");
 const path = require("path");
 
-let mainWindow
+let mainWindow;
 
 function createWindow() {
     mainWindow = new BrowserWindow({
-        width: 800,
-        height: 600,
+        minWidth: 1024,
+        minHeight: 768,
+        resizable: true,
+        frame: false,
         webPreferences: {
             nodeIntegration: true
         }
-    })
+    });
 
     mainWindow.loadURL(
         url.format({
@@ -31,12 +30,28 @@ function createWindow() {
     })
 }
 
-app.on('ready', createWindow)
+app.on('ready', createWindow);
 
 app.on('window-all-closed', function () {
     if (process.platform !== 'darwin') app.quit()
-})
+});
 
 app.on('activate', function () {
     if (mainWindow === null) createWindow()
-})
+});
+
+ipcMain.on('close', (event, arg) => {
+    mainWindow.close();
+});
+
+ipcMain.on('toggleMaximize', (event, arg) => {
+    if (mainWindow.isMaximized()) {
+        mainWindow.unmaximize();
+    } else {
+        mainWindow.maximize();
+    }
+});
+
+ipcMain.on('minimize', (event, arg) => {
+    mainWindow.minimize();
+});
