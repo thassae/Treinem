@@ -2,6 +2,22 @@ nav {
     -webkit-app-region: drag;
 }
 
-nav .button {
+nav .button, a {
     -webkit-app-region: no-drag;
 }
+
+.app-logo {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.125;
+}
+
+// .app-logo::before {
+//     font-family: "Font Awesome 5 Free";
+//     content: "\f19d";
+//     display: inline-block;
+//     padding-right: 3px;
+//     vertical-align: middle;
+//     font-weight: 900;
+//     color: #FA7C91;
+// }
