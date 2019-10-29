@@ -1,33 +1,29 @@
 <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-        <a class="navbar-item" href="https://bulma.io">
-            <span class="app-logo">Treinem</span>
-        </a>
-    </div>
     <div class="navbar-menu">
         <div class="navbar-start">
-            <!-- navbar items -->
+            <a class="navbar-item" href="https://bulma.io">
+                <span>Treinem</span>
+            </a>
         </div>
-
         <div class="navbar-end">
             <div class="navbar-item">
                 <div class="field is-grouped">
                     <p class="control">
-                        <a class="button is-primary" (click)="minimizeWindow()">
+                        <a class="button is-small is-primary" (click)="minimizeWindow()">
                             <span class="icon">
                                 <i class="fas fa-window-minimize" aria-hidden="true"></i>
                             </span>
                         </a>
                     </p>
                     <p class="control">
-                        <a class="button is-primary" (click)="toggleMaximize()">
+                        <a class="button is-small is-primary" (click)="toggleMaximize()">
                             <span class="icon">
                                 <i id="window-btn" class="fas fa-window-maximize" aria-hidden="true"></i>
                             </span>
                         </a>
                     </p>
                     <p class="control">
-                        <a class="button is-danger" (click)="closeWindow()">
+                        <a class="button is-small is-primary is-close" (click)="closeWindow()">
                             <span class="icon">
                                 <i class="fas fa-times" aria-hidden="true"></i>
                             </span>

@@ -2,9 +2,9 @@ const { app, BrowserWindow, ipcMain } = require('electron');
 const url = require("url");
 const path = require("path");
 
-// require('electron-reload')(__dirname, {
-//     electron: path.join(__dirname, 'node_modules/electron')
-// });
+require('electron-reload')(__dirname, {
+    electron: path.join(__dirname, 'node_modules/electron')
+});
 
 let mainWindow;
 
@@ -14,6 +14,7 @@ function createWindow() {
         minHeight: 768,
         resizable: true,
         frame: false,
+        useContentSize: true,
         webPreferences: {
             nodeIntegration: true
         }

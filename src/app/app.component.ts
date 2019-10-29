@@ -9,9 +9,7 @@ import { ElectronService } from 'ngx-electron';
 export class AppComponent {
   title = 'Treinem';
   
-  constructor(private electronService: ElectronService) { }
+  constructor() { }
 
-  launchWindow() {
-    this.electronService.shell.openExternal('https://coursetro.com');
-  }
+
 }

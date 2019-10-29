@@ -26,6 +26,11 @@ $body-background-color: $beige-lighter;
 $control-border-width: 2px;
 $input-border-color: transparent;
 $input-shadow: none;
+$modal-card-head-background-color: $primary;
+$modal-card-body-background-color: $body-background-color;
+
+$navbar-height: 1.25;
+
 
 // Import Bulma
 @import "~bulma/bulma";
@@ -40,5 +45,15 @@ $fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
 
 // Removing Electron scrollbar
 html {
+    overflow: hidden;
+}
+
+.content-scroll {
+    display: block;
     overflow: auto;
+    height: calc(100vh - 1.9rem);
+}
+
+.is-close:hover {
+    background-color: $danger !important;
 }

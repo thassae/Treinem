@@ -4,11 +4,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgxElectronModule } from 'ngx-electron';
 import { TitlebarComponent } from './components/titlebar/titlebar.component';
+import { StartComponent } from './components/content/start/start.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TitlebarComponent
+    TitlebarComponent,
+    StartComponent
   ],
   imports: [
     BrowserModule,

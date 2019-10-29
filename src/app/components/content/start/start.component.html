@@ -1,0 +1,80 @@
+<h1 class="title">
+    Bulma
+</h1>
+
+<p class="subtitle">
+    Modern CSS framework based on <a
+        href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Flexbox</a>
+</p>
+
+<div class="field">
+    <div class="control">
+        <input class="input" type="text" placeholder="Input">
+    </div>
+</div>
+
+<div class="field">
+    <p class="control">
+        <span class="select">
+            <select>
+                <option>Select dropdown</option>
+            </select>
+        </span>
+    </p>
+</div>
+
+<div class="buttons">
+    <a class="button is-primary" (click)="launchWindow()">Primary</a>
+    <a class="button is-link" (click)="toggleModal('parametersModal')">Link</a>
+</div>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+    aliqua. Massa massa ultricies mi quis hendrerit dolor magna eget. Aenean vel elit scelerisque mauris. Suscipit
+    adipiscing bibendum est ultricies integer quis auctor. Rhoncus dolor purus non enim praesent. Quis ipsum suspendisse
+    ultrices gravida dictum fusce ut placerat. Accumsan in nisl nisi scelerisque eu ultrices vitae. Enim sed faucibus
+    turpis in eu mi bibendum neque egestas. Egestas quis ipsum suspendisse ultrices. Id aliquet risus feugiat in ante.
+    Arcu non odio euismod lacinia at quis risus sed.
+
+    Ullamcorper malesuada proin libero nunc consequat interdum. Felis eget nunc lobortis mattis. Diam sit amet nisl
+    suscipit adipiscing bibendum est ultricies integer. Odio euismod lacinia at quis risus. Metus vulputate eu
+    scelerisque felis imperdiet proin. Sit amet est placerat in egestas erat. Mauris sit amet massa vitae tortor
+    condimentum. Egestas pretium aenean pharetra magna ac placerat vestibulum lectus mauris. Nulla aliquet porttitor
+    lacus luctus accumsan tortor. Ultricies leo integer malesuada nunc. Vulputate sapien nec sagittis aliquam malesuada
+    bibendum arcu vitae. Varius morbi enim nunc faucibus a pellentesque. Turpis cursus in hac habitasse platea dictumst
+    quisque. Pulvinar elementum integer enim neque volutpat. Quam adipiscing vitae proin sagittis nisl. Viverra accumsan
+    in nisl nisi scelerisque. Justo nec ultrices dui sapien. Fames ac turpis egestas maecenas. Donec adipiscing
+    tristique risus nec feugiat.
+
+    Fermentum leo vel orci porta non pulvinar neque. Mauris ultrices eros in cursus turpis massa. Quis ipsum suspendisse
+    ultrices gravida dictum fusce. Elit pellentesque habitant morbi tristique senectus et netus et. Molestie at
+    elementum eu facilisis sed odio morbi quis commodo. Fermentum iaculis eu non diam phasellus. Massa tempor nec
+    feugiat nisl pretium fusce id velit. Sit amet dictum sit amet justo. Fringilla ut morbi tincidunt augue. Egestas
+    integer eget aliquet nibh praesent tristique. Ut tellus elementum sagittis vitae. Lorem sed risus ultricies
+    tristique nulla aliquet enim tortor. Sociis natoque penatibus et magnis. Sed augue lacus viverra vitae congue eu
+    consequat ac. Scelerisque purus semper eget duis at tellus. Neque gravida in fermentum et sollicitudin ac. Blandit
+    volutpat maecenas volutpat blandit aliquam etiam erat velit scelerisque. Amet mauris commodo quis imperdiet massa
+    tincidunt nunc. Mi bibendum neque egestas congue quisque egestas diam. Ipsum dolor sit amet consectetur adipiscing.
+
+    Nec nam aliquam sem et tortor consequat. Est ante in nibh mauris cursus mattis molestie a iaculis. Eu volutpat odio
+    facilisis mauris sit amet. Suscipit adipiscing bibendum est ultricies integer. Pulvinar mattis nunc sed blandit
+    libero volutpat sed. A iaculis at erat pellentesque adipiscing commodo. Tortor at risus viverra adipiscing at in
+    tellus integer. Semper risus in hendrerit gravida rutrum quisque non. Ipsum dolor sit amet consectetur. Sed cras
+    ornare arcu dui vivamus. In nibh mauris cursus mattis molestie a iaculis at. Pellentesque eu tincidunt tortor
+    aliquam nulla facilisi cras fermentum.</p>
+
+<div id="parametersModal" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Modal title</p>
+            <button class="button fa fa-times is-danger is-small" aria-label="close" (click)="toggleModal('parametersModal')"></button>
+        </header>
+        <section class="modal-card-body">
+            <!-- Content ... -->
+        </section>
+        <footer class="modal-card-foot">
+            <button class="button is-success" (click)="toggleModal('parametersModal')">Save changes</button>
+            <button class="button" (click)="toggleModal('parametersModal')">Cancel</button>
+        </footer>
+    </div>
+</div>
