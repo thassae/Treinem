@@ -20,11 +20,11 @@ export class TitlebarComponent implements OnInit {
   toggleMaximize() {
     this.electronService.ipcRenderer.send('toggleMaximize');
     if (this.electronService.remote.getCurrentWindow().isMaximized()) {
-      document.getElementById("window-btn").classList.remove('fa-window-maximize');
-      document.getElementById("window-btn").classList.add('fa-window-restore');
+      document.getElementById("window-btn").classList.remove('maximize-btn');
+      document.getElementById("window-btn").classList.add('restore-btn');
     } else {
-      document.getElementById("window-btn").classList.remove('fa-window-restore');
-      document.getElementById("window-btn").classList.add('fa-window-maximize');
+      document.getElementById("window-btn").classList.remove('restore-btn');
+      document.getElementById("window-btn").classList.add('maximize-btn');
     }
   }
 

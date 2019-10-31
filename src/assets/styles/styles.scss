@@ -17,6 +17,7 @@ sans-serif;
 $grey-dark: $brown;
 $grey-light: $beige-light;
 $primary: $purple;
+$danger: $pink;
 $link: $pink;
 $widescreen-enabled: false;
 $fullhd-enabled: false;
@@ -43,6 +44,13 @@ $fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
 @import "~@fortawesome/fontawesome-free/scss/solid";
 @import "~@fortawesome/fontawesome-free/scss/v4-shims";
 
+//Importing Windows Icons font
+@font-face {
+    font-family: 'SegoeMDL';
+    src: url('../fonts/segmdl2.ttf');
+}
+
+
 // Removing Electron scrollbar
 html {
     overflow: hidden;
@@ -56,4 +64,41 @@ html {
 
 .is-close:hover {
     background-color: $danger !important;
+}
+
+i {
+    font-style: normal;
+}
+
+.close-btn:before {
+    font-family: 'SegoeMDL';
+    content: '\E8BB';
+}
+
+.minimize-btn:before {
+    font-family: 'SegoeMDL';
+    content: '\E921';
+}
+
+.restore-btn:before {
+    font-family: 'SegoeMDL';
+    content: '\E923';
+}
+
+.maximize-btn:before {
+    font-family: 'SegoeMDL';
+    content: '\E922';
+}
+
+.modal-card-title {
+    color: white;
+    padding-left: 0.75rem;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.modal-card-head {
+    border-radius: 0px;
+    padding: 0px;
 }

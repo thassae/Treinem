@@ -1,80 +1,92 @@
-<h1 class="title">
-    Bulma
-</h1>
-
-<p class="subtitle">
-    Modern CSS framework based on <a
-        href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Flexbox</a>
-</p>
-
-<div class="field">
-    <div class="control">
-        <input class="input" type="text" placeholder="Input">
+<div class="tile is-ancestor">
+    <div class="tile is-4 is-vertical is-parent">
+        <div class="tile is-child box notification is-primary">
+            <p class="title">Início</p>
+            <p class="subtitle">Comece seus estudos aqui</p>
+            <p>Para começar, clique no botão abaixo e escolha a área de estudos.</p>
+            <a class="button is-link" (click)="toggleModal('parametersModal')">Começar</a>
+        </div>
+        <div class="tile is-child box notification is-warning">
+            <p class="title">Sobre o Treinem</p>
+            <p>Este programa foi feito por <a>Thassae Santos</a> e está sob licença GPL v3.0. </p>
+            <a>Clique aqui para ler os termos de uso e política de privacidade.</a>
+        </div>
+    </div>
+    <div class="tile is-parent">
+        <div class="tile is-child box notification is-info">
+            <p class="title">Como utilizar?</p>
+            <p>
+                Este programa foi feito pensando naqueles que necessitam de uma ajuda extra nos
+                estudos e não possuem recursos para arcar com cursos ou gostam de adotar uma abordagem mais autodidata
+                no estudo.
+            </p>
+            <p>
+                Você encontrará um banco de questões que fizeram parte do Exame Nacional do Ensino Médio até o ano de
+                2019 e, em cada questão, você encontrará um link para saber mais sobre o tema abordado na mesma, de modo
+                que a resolução se torne possível.
+            </p>
+            <p>Para maximizar os resultados, recomendamos a utilização de fontes alternativas de conhecimento
+                (principalmente livros, revistas e jornais) e do
+                auxílio de professores ou de pessoas que tenham conhecimento do conteúdo abordado.</p>
+        </div>
     </div>
 </div>
-
-<div class="field">
-    <p class="control">
-        <span class="select">
-            <select>
-                <option>Select dropdown</option>
-            </select>
-        </span>
-    </p>
-</div>
-
-<div class="buttons">
-    <a class="button is-primary" (click)="launchWindow()">Primary</a>
-    <a class="button is-link" (click)="toggleModal('parametersModal')">Link</a>
-</div>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Massa massa ultricies mi quis hendrerit dolor magna eget. Aenean vel elit scelerisque mauris. Suscipit
-    adipiscing bibendum est ultricies integer quis auctor. Rhoncus dolor purus non enim praesent. Quis ipsum suspendisse
-    ultrices gravida dictum fusce ut placerat. Accumsan in nisl nisi scelerisque eu ultrices vitae. Enim sed faucibus
-    turpis in eu mi bibendum neque egestas. Egestas quis ipsum suspendisse ultrices. Id aliquet risus feugiat in ante.
-    Arcu non odio euismod lacinia at quis risus sed.
-
-    Ullamcorper malesuada proin libero nunc consequat interdum. Felis eget nunc lobortis mattis. Diam sit amet nisl
-    suscipit adipiscing bibendum est ultricies integer. Odio euismod lacinia at quis risus. Metus vulputate eu
-    scelerisque felis imperdiet proin. Sit amet est placerat in egestas erat. Mauris sit amet massa vitae tortor
-    condimentum. Egestas pretium aenean pharetra magna ac placerat vestibulum lectus mauris. Nulla aliquet porttitor
-    lacus luctus accumsan tortor. Ultricies leo integer malesuada nunc. Vulputate sapien nec sagittis aliquam malesuada
-    bibendum arcu vitae. Varius morbi enim nunc faucibus a pellentesque. Turpis cursus in hac habitasse platea dictumst
-    quisque. Pulvinar elementum integer enim neque volutpat. Quam adipiscing vitae proin sagittis nisl. Viverra accumsan
-    in nisl nisi scelerisque. Justo nec ultrices dui sapien. Fames ac turpis egestas maecenas. Donec adipiscing
-    tristique risus nec feugiat.
-
-    Fermentum leo vel orci porta non pulvinar neque. Mauris ultrices eros in cursus turpis massa. Quis ipsum suspendisse
-    ultrices gravida dictum fusce. Elit pellentesque habitant morbi tristique senectus et netus et. Molestie at
-    elementum eu facilisis sed odio morbi quis commodo. Fermentum iaculis eu non diam phasellus. Massa tempor nec
-    feugiat nisl pretium fusce id velit. Sit amet dictum sit amet justo. Fringilla ut morbi tincidunt augue. Egestas
-    integer eget aliquet nibh praesent tristique. Ut tellus elementum sagittis vitae. Lorem sed risus ultricies
-    tristique nulla aliquet enim tortor. Sociis natoque penatibus et magnis. Sed augue lacus viverra vitae congue eu
-    consequat ac. Scelerisque purus semper eget duis at tellus. Neque gravida in fermentum et sollicitudin ac. Blandit
-    volutpat maecenas volutpat blandit aliquam etiam erat velit scelerisque. Amet mauris commodo quis imperdiet massa
-    tincidunt nunc. Mi bibendum neque egestas congue quisque egestas diam. Ipsum dolor sit amet consectetur adipiscing.
-
-    Nec nam aliquam sem et tortor consequat. Est ante in nibh mauris cursus mattis molestie a iaculis. Eu volutpat odio
-    facilisis mauris sit amet. Suscipit adipiscing bibendum est ultricies integer. Pulvinar mattis nunc sed blandit
-    libero volutpat sed. A iaculis at erat pellentesque adipiscing commodo. Tortor at risus viverra adipiscing at in
-    tellus integer. Semper risus in hendrerit gravida rutrum quisque non. Ipsum dolor sit amet consectetur. Sed cras
-    ornare arcu dui vivamus. In nibh mauris cursus mattis molestie a iaculis at. Pellentesque eu tincidunt tortor
-    aliquam nulla facilisi cras fermentum.</p>
 
 <div id="parametersModal" class="modal">
     <div class="modal-background"></div>
     <div class="modal-card">
         <header class="modal-card-head">
-            <p class="modal-card-title">Modal title</p>
-            <button class="button fa fa-times is-danger is-small" aria-label="close" (click)="toggleModal('parametersModal')"></button>
+            <div class="modal-card-title">Configurar</div>
+            <a class="button is-small is-primary is-close" (click)="toggleModal('parametersModal')">
+                <span class="icon">
+                    <i class="close-btn" aria-hidden="true"></i>
+                </span>
+            </a>
         </header>
         <section class="modal-card-body">
-            <!-- Content ... -->
+            <fieldset>
+                <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                        <label class="label">Área de conhecimento</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <div class="control">
+                                <div class="select is-fullwidth">
+                                    <select>
+                                        <option>Ciências da Natureza e suas Tecnologias</option>
+                                        <option>Ciências Humanas e suas Tecnologias</option>
+                                        <option>Linguagens, Códigos e suas Tecnologias</option>
+                                        <option>Matemática e suas Tecnologias</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                        <label class="label">Língua estrangeira</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <div class="control">
+                                <label class="radio">
+                                    <input type="radio" name="language">
+                                    Inglês
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="language">
+                                    Espanhol
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="is-pulled-right">
+                <button class="button is-success" (click)="toggleModal('parametersModal')">Iniciar</button>
+            </div>
         </section>
-        <footer class="modal-card-foot">
-            <button class="button is-success" (click)="toggleModal('parametersModal')">Save changes</button>
-            <button class="button" (click)="toggleModal('parametersModal')">Cancel</button>
-        </footer>
     </div>
 </div>
