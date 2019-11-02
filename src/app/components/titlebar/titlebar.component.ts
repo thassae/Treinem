@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ElectronService } from 'ngx-electron';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-titlebar',
@@ -19,13 +20,9 @@ export class TitlebarComponent implements OnInit {
 
   toggleMaximize() {
     this.electronService.ipcRenderer.send('toggleMaximize');
-    if (this.electronService.remote.getCurrentWindow().isMaximized()) {
-      document.getElementById("window-btn").classList.remove('maximize-btn');
-      document.getElementById("window-btn").classList.add('restore-btn');
-    } else {
-      document.getElementById("window-btn").classList.remove('restore-btn');
-      document.getElementById("window-btn").classList.add('maximize-btn');
-    }
+    let isMaximized = this.electronService.remote.getCurrentWindow().isMaximized();
+    $('#window-btn').toggleClass('restore-btn', isMaximized);
+    $('#window-btn').toggleClass('maximize-btn', !isMaximized);
   }
 
   minimizeWindow() {

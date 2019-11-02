@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ElectronService } from 'ngx-electron';
+import { ParametersModalComponent } from '../../modals/parameters-modal/parameters-modal.component';
+import { ModalService } from 'src/app/services/modal.service';
 
 @Component({
   selector: 'app-start',
@@ -8,7 +10,7 @@ import { ElectronService } from 'ngx-electron';
 })
 export class StartComponent implements OnInit {
 
-  constructor(private electronService: ElectronService) { }
+  constructor(private electronService: ElectronService, private modalService: ModalService) { }
 
   ngOnInit() {
   }
@@ -17,10 +19,7 @@ export class StartComponent implements OnInit {
     this.electronService.shell.openExternal('https://coursetro.com');
   }
 
-  toggleModal(name){
-    var element = document.getElementById(name);
-    if (element.classList) {
-      element.classList.toggle("is-active");
-    }
+  toggleModal(name: string) {
+    this.modalService.toggleModal(name);
   }
 }

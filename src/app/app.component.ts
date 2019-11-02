@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ElectronService } from 'ngx-electron';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +7,7 @@ import { ElectronService } from 'ngx-electron';
 })
 export class AppComponent {
   title = 'Treinem';
-  
+
   constructor() { }
 
 
