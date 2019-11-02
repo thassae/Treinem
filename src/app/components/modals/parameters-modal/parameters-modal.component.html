@@ -3,7 +3,7 @@
     <div class="modal-card">
         <header class="modal-card-head">
             <div class="modal-card-title">Configurar</div>
-            <a class="button is-small is-primary is-close" (click)="toggleModal('parametersModal')">
+            <a class="button is-small is-primary is-close" (click)="closeModal()">
                 <span class="icon">
                     <i class="close-btn" aria-hidden="true"></i>
                 </span>
@@ -19,18 +19,15 @@
                         <div class="field">
                             <div class="control">
                                 <div class="select is-fullwidth">
-                                    <select>
-                                        <option>Ciências da Natureza e suas Tecnologias</option>
-                                        <option>Ciências Humanas e suas Tecnologias</option>
-                                        <option>Linguagens, Códigos e suas Tecnologias</option>
-                                        <option>Matemática e suas Tecnologias</option>
+                                    <select [(ngModel)]="selectedArea">
+                                        <option *ngFor="let area of areas | enumToList" [value]="area.key">{{area.value}}</option>
                                     </select>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="field is-horizontal">
+                <div class="field is-horizontal" *ngIf="selectedArea === 'LINGUAGENS'">
                     <div class="field-label is-normal">
                         <label class="label">Língua estrangeira</label>
                     </div>
@@ -38,11 +35,11 @@
                         <div class="field">
                             <div class="control">
                                 <label class="radio">
-                                    <input type="radio" name="language">
+                                    <input type="radio" name="language" value="en" [(ngModel)]="language" >
                                     Inglês
                                 </label>
                                 <label class="radio">
-                                    <input type="radio" name="language">
+                                    <input type="radio" name="language" value="es" [(ngModel)]="language" > 
                                     Espanhol
                                 </label>
                             </div>
@@ -51,7 +48,7 @@
                 </div>
             </fieldset>
             <div class="is-pulled-right">
-                <button class="button is-success" (click)="toggleModal('parametersModal')">Iniciar</button>
+                <button class="button is-success" (click)="startTraining()">Iniciar</button>
             </div>
         </section>
     </div>

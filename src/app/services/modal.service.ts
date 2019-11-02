@@ -8,8 +8,11 @@ export class ModalService {
 
   constructor() { }
 
-  toggleModal(name: string) {
-    $("[id='" + name + "']").toggleClass('is-active');
+  openModal(name: string) {
+    $("[id='" + name + "']").addClass('is-active');
   }
 
+  closeModal(name: string) {
+    $("[id='" + name + "']").removeClass('is-active');
+  }
 }

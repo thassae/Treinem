@@ -19,7 +19,7 @@ export class StartComponent implements OnInit {
     this.electronService.shell.openExternal('https://coursetro.com');
   }
 
-  toggleModal(name: string) {
-    this.modalService.toggleModal(name);
+  openModal(name: string) {
+    this.modalService.openModal(name);
   }
 }
