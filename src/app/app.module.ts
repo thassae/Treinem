@@ -8,6 +8,7 @@ import { StartComponent } from './components/content/start/start.component';
 import { ParametersModalComponent } from './components/modals/parameters-modal/parameters-modal.component';
 import { TitlebarComponent } from './components/titlebar/titlebar.component';
 import { EnumToListPipe } from './pipes/enum-to-list.pipe';
+import { QuestionComponent } from './components/content/question/question.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { EnumToListPipe } from './pipes/enum-to-list.pipe';
     TitlebarComponent,
     StartComponent,
     ParametersModalComponent,
-    EnumToListPipe
+    EnumToListPipe,
+    QuestionComponent
   ],
   imports: [
     BrowserModule,

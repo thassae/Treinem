@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalService } from 'src/app/services/modal.service';
 import { AreaEnum } from 'src/app/models/enums/area-enum';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -11,9 +12,9 @@ import { AreaEnum } from 'src/app/models/enums/area-enum';
 export class ParametersModalComponent implements OnInit {
   areas = AreaEnum;
   selectedArea: string;
-  language: string;
+  language: string = "pt";
 
-  constructor(private modalService: ModalService) {
+  constructor(private modalService: ModalService, private router: Router) {
   }
 
   ngOnInit() {
@@ -24,8 +25,8 @@ export class ParametersModalComponent implements OnInit {
     this.modalService.closeModal('parametersModal');
   }
 
-  startTraining() {
-    console.log({ 'areaSelecionada': this.selectedArea, 'linguaEstrangeira': this.language });
+  startTraining() {    
+    this.router.navigate(["../question", this.selectedArea, this.language]);
     this.closeModal();
   }
 }

@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { StartComponent } from './components/content/start/start.component';
+import { QuestionComponent } from './components/content/question/question.component';
 
 
 const routes: Routes = [
   { path: '', component: StartComponent },
+  { path: 'question/:area/:language', component: QuestionComponent }
 ];
 
 @NgModule({
