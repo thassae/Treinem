@@ -1,16 +1,22 @@
 <div class="tile is-ancestor">
     <div class="tile is-vertical">
-        <div class="tile is-parent">
-            <div class="tile is-child  notification is-primary">
+        <div class="tile">
+            <div class="tile is-parent is-12">
                 <div class="tile is-child notification is-primary">
-                    <p class="title">Vertical...</p>
-                    <p class="subtitle">Top tile</p>
+                    <div class="content">
+                        <p class="title">
+                            {{area.value}}
+                            {{area.code == "LINGUAGENS" ? (language == "en" ? "(Inglês)" : "(Espanhol)") : "" }}
+                            <button class="button is-primary is-pulled-right" [routerLink]="['/']">Voltar</button>
+                        </p>
+
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="tile is-vertical">
-            <div class="tile is-parent is-8">
-                <div class="tile is-child notification is-success">
+        <div class="tile">
+            <div class="tile is-parent is-vertical is-8">
+                <div class="tile is-child notification is-warning">
                     <div class="content">
                         <p class="title">Tall tile</p>
                         <p class="subtitle">With even more content</p>
@@ -20,24 +26,40 @@
                     </div>
                 </div>
             </div>
-            <div class="tile">
-                <div class="tile is-parent">
-                    <div class="tile is-child notification is-success">
+            <div class="tile is-parent is-vertical">
+                <div class="tile is-child notification is-info">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td><button class="button is-primary is-pulled-left" [routerLink]="['/']">A</button>
+                                </td>
+                                <td>Alternativa A</td>
+                            </tr>
+                            <tr>
+                                <td><button class="button is-primary is-pulled-left" [routerLink]="['/']">B</button>
+                                </td>
+                                <td>Alternativa B</td>
+                            </tr>
+                            <tr>
+                                <td><button class="button is-primary is-pulled-left" [routerLink]="['/']">C</button>
+                                </td>
+                                <td>Alternativa C</td>
+                            </tr>
+                            <tr>
+                                <td><button class="button is-primary is-pulled-left" [routerLink]="['/']">D</button>
+                                </td>
+                                <td>Alternativa D</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <div class="tile is-child notification is-danger">
+                    <div class="content">
+                        <p class="title">Tall tile</p>
+                        <p class="subtitle">With even more content</p>
                         <div class="content">
-                            <p class="title">Tall tile</p>
-                            <p class="subtitle">With even more content</p>
-                            <div class="content">
-                                <!-- Content -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tile is-child notification is-success">
-                        <div class="content">
-                            <p class="title">Tall tile</p>
-                            <p class="subtitle">With even more content</p>
-                            <div class="content">
-                                <!-- Content -->
-                            </div>
+                            <!-- Content -->
                         </div>
                     </div>
                 </div>
