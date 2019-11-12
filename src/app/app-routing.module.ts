@@ -6,7 +6,7 @@ import { QuestionComponent } from './components/content/question/question.compon
 
 const routes: Routes = [
   { path: '', component: StartComponent },
-  { path: 'question/:area/:language', component: QuestionComponent }
+  { path: 'question/:area/:language/:size', component: QuestionComponent }
 ];
 
 @NgModule({

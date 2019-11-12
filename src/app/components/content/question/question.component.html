@@ -29,8 +29,10 @@
                     <table class="table">
                         <tbody>
                             <tr *ngFor="let option of currentQuestion.options, index as i">
-                                <td><button class="button is-primary is-pulled-left" [disabled]="currentQuestion.isAnswered"
-                                        [ngClass]="{'is-success' : option.isRight && option.isSelected, 'is-danger' : !option.isRight && option.isSelected}" (click)="selectOption(option)">{{i}}</button>
+                                <td><button class="button is-primary is-pulled-left"
+                                        [disabled]="currentQuestion.isAnswered"
+                                        [ngClass]="{'is-success' : option.isRight && option.isSelected, 'is-danger' : !option.isRight && option.isSelected}"
+                                        (click)="selectOption(option)">{{(i + 10).toString(36).toUpperCase()}}</button>
                                 </td>
                                 <td>{{option.content}}</td>
                             </tr>
@@ -43,9 +45,9 @@
                         <p class="title">Tá com dúvida?</p>
                         <p class="subtitle">Talvez você precise pesquisar sobre:</p>
                         <div class="content">
-                            <h3 class="has-text-link" *ngFor="let keyword of currentQuestion.keywords">
-                                <a (click)="openLink(keyword)">{{keyword}}</a>
-                            </h3>
+                            <button *ngFor="let keyword of currentQuestion.keywords"
+                                class="button is-primary is-pulled-left"
+                                (click)="openLink(keyword)">{{keyword}}</button>
                         </div>
                     </div>
                 </div>

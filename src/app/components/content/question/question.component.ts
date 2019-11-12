@@ -15,6 +15,7 @@ import { Option } from 'src/app/models/objects/option';
 export class QuestionComponent implements OnInit {
   area: any;
   language: string;
+  size: number;
   questions: Question[];
   currentQuestion: Question;
   currentQuestionNumber: number = 0;
@@ -25,7 +26,8 @@ export class QuestionComponent implements OnInit {
     this.activatedRoute.paramMap.subscribe(params => {
       this.area = { code: params.get('area'), value: AreaEnum[params.get('area')] };
       this.language = params.get('language');
-      this.questionService.getQuestions(this.area.code, this.language).subscribe(questions => {
+      this.size = parseInt(params.get('size'));
+      this.questionService.getQuestions(this.area.code, this.language, this.size).subscribe(questions => {
         this.questions = questions;
         this.currentQuestion = questions.pop();
         this.currentQuestionNumber++;
@@ -35,7 +37,7 @@ export class QuestionComponent implements OnInit {
 
   openLink(keyword: string) {
     let searchString = keyword.split(' ').join('+');
-    this.electronService.shell.openExternal('https://duckduckgo.com/?kl=br-pt&kz=1&q=' + searchString);
+    this.electronService.shell.openExternal('https://duckduckgo.com/?kl=br-pt&kz=1&q=\\' + searchString);
   }
 
   selectOption(option: Option) {

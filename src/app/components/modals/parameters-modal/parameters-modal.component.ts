@@ -13,6 +13,7 @@ export class ParametersModalComponent implements OnInit {
   areas = AreaEnum;
   selectedArea: string;
   language: string = "pt";
+  size: number = 5;
 
   constructor(private modalService: ModalService, private router: Router) {
   }
@@ -26,7 +27,7 @@ export class ParametersModalComponent implements OnInit {
   }
 
   startTraining() {    
-    this.router.navigate(["../question", this.selectedArea, this.language]);
+    this.router.navigate(["../question", this.selectedArea, this.language, this.size]);
     this.closeModal();
   }
 }

@@ -10,7 +10,7 @@ export class QuestionService {
 
   constructor() { }
 
-  getQuestions(area: AreaEnum, language: string): Observable<Question[]> {
+  getQuestions(area: AreaEnum, language: string, size: number): Observable<Question[]> {
     let json = [{
       type: 'NATUREZA',
       language: 'pt',
