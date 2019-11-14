@@ -20,19 +20,19 @@ export class QuestionComponent implements OnInit {
   currentQuestion: Question;
   currentQuestionNumber: number = 0;
 
-  constructor(private activatedRoute: ActivatedRoute, private questionService: QuestionService, private electronService: ElectronService) { }
+  constructor(private activatedRoute: ActivatedRoute, private electronService: ElectronService) {
+    this.activatedRoute.data.subscribe((data) => {
+      this.area = { code: this.activatedRoute.snapshot.params.area, value: AreaEnum[this.activatedRoute.snapshot.params.area] };
+      this.language = this.activatedRoute.snapshot.params.language;
+      this.size = parseInt(this.activatedRoute.snapshot.params.size);
+      this.questions = data.questions;
+      this.currentQuestion = this.questions.pop();
+      this.currentQuestionNumber++;
+    });
+  }
 
   ngOnInit() {
-    this.activatedRoute.paramMap.subscribe(params => {
-      this.area = { code: params.get('area'), value: AreaEnum[params.get('area')] };
-      this.language = params.get('language');
-      this.size = parseInt(params.get('size'));
-      this.questionService.getQuestions(this.area.code, this.language, this.size).subscribe(questions => {
-        this.questions = questions;
-        this.currentQuestion = questions.pop();
-        this.currentQuestionNumber++;
-      });
-    });
+
   }
 
   openLink(keyword: string) {

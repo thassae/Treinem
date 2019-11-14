@@ -9,6 +9,8 @@ import { ParametersModalComponent } from './components/modals/parameters-modal/p
 import { TitlebarComponent } from './components/titlebar/titlebar.component';
 import { EnumToListPipe } from './pipes/enum-to-list.pipe';
 import { QuestionComponent } from './components/content/question/question.component';
+import { HttpClientModule } from '@angular/common/http';
+import { QuestionResolver } from './services/question-resolver';
 
 @NgModule({
   declarations: [
@@ -21,11 +23,14 @@ import { QuestionComponent } from './components/content/question/question.compon
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     NgxElectronModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    QuestionResolver
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
